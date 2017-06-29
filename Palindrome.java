@@ -1,9 +1,11 @@
+import java.util.Scanner;
+
 public class Palindrome
 {
 	public static void main(String[] args)
 	{
-	        Scanner in = new Scanner(System.in);
-	        System.out.println("Введите слово или строку");
+	        java.util.Scanner in = new java.util.Scanner(System.in);
+	        System.out.println("Enter a string or word");
 	        String s = in.next();
 	        isPalindrome(s);
 	}
@@ -11,21 +13,20 @@ public class Palindrome
 	    {
 	        String r = "";
 	        for (int i = s.length() - 1; i >= 0; --i)
-	            r += s.charAt(i);
+	        	r += s.charAt(i);
 	        return r;
 	          
 	    }
 	    public static Boolean isPalindrome(String s) 
 	    {
-	        if(s.equals(reverseString(s)))
+    		if(s.equals(reverseString(s)))
 	        {
-	            System.out.println("Полиндром");
+	            System.out.println("Palindrome");
 	        }
 	        else
 	        {
-	            System.out.println("Не полиндром");
-	        }
-	        return s.equals(reverseString(s));
-	        
+	            System.out.println("Not a Palindrome");
+	        }  
+    		return s.equals(reverseString(s)); 
 		}
 }
